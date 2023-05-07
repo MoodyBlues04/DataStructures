@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '/tests/StackTest.php';
+include_once __DIR__ . '/tests/ArrayStackTest.php';
 
-$test = new \tests\StackTest();
+$test = new \tests\ArrayStackTest();
 $test->testPush();

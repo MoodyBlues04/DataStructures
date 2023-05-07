@@ -1,12 +1,12 @@
 <?php
 
-namespace stack;
+declare(strict_types=1);
 
-use stack\StackInterface;
+namespace stack;
 
 include_once __DIR__ . '/StackInterface.php';
 
-class ArrayStack implements StackInterface
+class ArrayStack implements \stack\StackInterface
 {
     /**
      * @var ?int $maxSize unlimit on null
@@ -23,7 +23,7 @@ class ArrayStack implements StackInterface
     public function push(mixed $value): void
     {
         if ($this->isFull()) {
-            return;
+            throw new \RuntimeException('stack is full');
         }
         $this->stack[] = $value;
     }
@@ -31,14 +31,17 @@ class ArrayStack implements StackInterface
     public function pop(): void
     {
         if ($this->isEmpty()) {
-            return;
+            throw new \RuntimeException('stack is empty');
         }
         array_pop($this->stack);
     }
 
     public function top(): mixed
     {
-        return $this->isEmpty() ? null : end($this->stack);
+        if ($this->isEmpty()) {
+            throw new \RuntimeException('stack is empty');
+        }
+        return end($this->stack);
     }
 
     public function isEmpty(): bool
