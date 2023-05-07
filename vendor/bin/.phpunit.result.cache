@@ -1,1 +1,0 @@
-{"version":1,"defects":{"tests\\ArrayStackTest::testPush":5,"tests\\ArrayStackTest::testPopEmpty":5},"times":{"tests\\ArrayStackTest::testPush":0.003,"tests\\ArrayStackTest::testPop":0,"tests\\ArrayStackTest::testPopEmpty":0.001,"tests\\ArrayStackTest::testPushFull":0}}
