@@ -6,7 +6,7 @@ namespace stack;
 
 interface StackInterface
 {
-    public function __construct(int $maxSize);
+    public function __construct(?int $maxSize);
 
     /**
      * @throws \RuntimeException
@@ -24,4 +24,6 @@ interface StackInterface
     public function top(): mixed;
 
     public function isEmpty(): bool;
+
+    public function getSize(): int;
 }

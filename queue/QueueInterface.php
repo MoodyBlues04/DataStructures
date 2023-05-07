@@ -13,4 +13,8 @@ interface QueueInterface
     public function remove(): void;
 
     public function element(): mixed;
+
+    public function isEmpty(): bool;
+
+    public function getSize(): int;
 }

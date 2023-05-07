@@ -46,7 +46,7 @@ class ArrayStack implements \stack\StackInterface
 
     public function isEmpty(): bool
     {
-        return sizeof($this->stack) === 0;
+        return $this->getSize() === 0;
     }
 
     public function isFull(): bool
@@ -54,6 +54,11 @@ class ArrayStack implements \stack\StackInterface
         if ($this->maxSize === null) {
             return false;
         }
-        return sizeof($this->stack) === $this->maxSize;
+        return $this->getSize() === $this->maxSize;
+    }
+
+    public function getSize(): int
+    {
+        return sizeof($this->stack);
     }
 }

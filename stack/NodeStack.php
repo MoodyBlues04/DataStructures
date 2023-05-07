@@ -67,4 +67,9 @@ class NodeStack implements StackInterface
         }
         return $this->currentSize === $this->maxSize;
     }
+
+    public function getSize(): int
+    {
+        return $this->currentSize;
+    }
 }

@@ -24,6 +24,14 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
         $this->assertSame($testValue, $stack->top());
     }
 
+    public function testSize()
+    {
+        $testValues = $this->getRandomValuesArray();
+        $stack = $this->getStackByValues($testValues);
+
+        $this->assertSame(sizeof($testValues), $stack->getSize());
+    }
+
     public function testPop(): void
     {
         $testValues = $this->getRandomValuesArray();

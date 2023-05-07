@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace queue;
 
-class Queue
-{
-    private int $maxSize;
-    private array $queue;
+include_once __DIR__ . '/QueueInterface.php';
 
-    public function __construct($maxSize = null)
+class Queue implements QueueInterface
+{
+    private ?int $maxSize;
+    private array $queue = [];
+
+    public function __construct(?int $maxSize = null)
     {
         $this->maxSize = $maxSize;
     }
