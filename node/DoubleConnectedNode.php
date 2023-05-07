@@ -6,7 +6,7 @@ namespace node;
 
 class DoubleConnectedNode
 {
-    public mixed $value;
+    public mixed $value = null;
     public ?DoubleConnectedNode $next = null;
     public ?DoubleConnectedNode $prev = null;
 
@@ -15,5 +15,8 @@ class DoubleConnectedNode
         ?DoubleConnectedNode $prev = null,
         ?DoubleConnectedNode $next = null
     ) {
+        $this->value = $value;
+        $this->prev = $prev;
+        $this->next = $next;
     }
 }

@@ -29,9 +29,12 @@ class NodeStack implements StackInterface
         }
 
         $nextNode = new DoubleConnectedNode($value, $this->currentNode);
-        $this->currentNode->next = $nextNode;
+        if (!$this->isEmpty()) {
+            $this->currentNode->next = $nextNode;
+        }
 
         $this->currentNode = $nextNode;
+        $this->currentSize++;
     }
 
     public function pop(): void
@@ -59,6 +62,9 @@ class NodeStack implements StackInterface
 
     public function isFull(): bool
     {
+        if (null === $this->maxSize) {
+            return false;
+        }
         return $this->currentSize === $this->maxSize;
     }
 }

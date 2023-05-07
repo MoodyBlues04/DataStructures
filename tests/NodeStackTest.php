@@ -1,24 +1,24 @@
 <?php
 
-declare(strict_types=1);
+namespace stack;
 
-namespace tests;
-
-use stack\ArrayStack;
+use PHPUnit\Framework\TestCase;
 use traits\RandomValuesTrait;
+use stack\NodeStack;
 
-include_once __DIR__ . '/../stack/ArrayStack.php';
+include_once __DIR__ . '/../stack/NodeStack.php';
 include_once __DIR__ . '/../traits/RandomValuesTrait.php';
 
-class ArrayStackTest extends \PHPUnit\Framework\TestCase
+
+class NodeStackTest extends TestCase
 {
     use RandomValuesTrait;
 
-    public function testPush(): void
+    public function testPush()
     {
         $testValue = $this->getRandomValue();
 
-        $stack = new ArrayStack();
+        $stack = new NodeStack();
         $stack->push($testValue);
 
         $this->assertSame($testValue, $stack->top());
@@ -43,7 +43,7 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
     {
         $this->expectException(\RuntimeException::class);
 
-        $stack = new ArrayStack();
+        $stack = new NodeStack();
         $stack->top();
         $stack->pop();
     }
@@ -51,7 +51,7 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
     public function testPushFull(): void
     {
         $maxSize = 2;
-        $stack = new ArrayStack($maxSize);
+        $stack = new NodeStack($maxSize);
         $values = $this->getRandomValuesArray($maxSize);
 
         foreach ($values as $value) {
@@ -62,9 +62,9 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
         $stack->push($values[0]);
     }
 
-    private function getStackByValues(array $values): ArrayStack
+    private function getStackByValues(array $values): NodeStack
     {
-        $stack = new ArrayStack();
+        $stack = new NodeStack();
         foreach ($values as $value) {
             $stack->push($value);
         }
