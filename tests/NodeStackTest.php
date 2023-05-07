@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace stack;
 
 use PHPUnit\Framework\TestCase;
