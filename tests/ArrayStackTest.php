@@ -49,10 +49,12 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
 
     public function testPopEmpty(): void
     {
-        $this->expectException(\RuntimeException::class);
-
         $stack = new ArrayStack();
+
+        $this->expectException(\RuntimeException::class);
         $stack->top();
+
+        $this->expectException(\RuntimeException::class);
         $stack->pop();
     }
 

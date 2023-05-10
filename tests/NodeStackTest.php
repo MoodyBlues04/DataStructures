@@ -51,10 +51,12 @@ class NodeStackTest extends TestCase
 
     public function testPopEmpty(): void
     {
-        $this->expectException(\RuntimeException::class);
-
         $stack = new NodeStack();
+
+        $this->expectException(\RuntimeException::class);
         $stack->top();
+
+        $this->expectException(\RuntimeException::class);
         $stack->pop();
     }
 
