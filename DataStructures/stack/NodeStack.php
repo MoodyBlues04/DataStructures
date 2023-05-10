@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace stack;
+namespace DataStructures\stack;
 
-use node\DoubleConnectedNode;
+use DataStructures\node\DoubleConnectedNode;
 
 include_once __DIR__ . '/StackInterface.php';
 include_once __DIR__ . '/../node/DoubleConnectedNode.php';

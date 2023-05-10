@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace node;
+namespace DataStructures\node;
 
 class DoubleConnectedNode
 {

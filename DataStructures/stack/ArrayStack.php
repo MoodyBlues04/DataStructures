@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace stack;
+namespace DataStructures\stack;
 
 include_once __DIR__ . '/StackInterface.php';
 
-class ArrayStack implements \stack\StackInterface
+class ArrayStack implements StackInterface
 {
     /**
      * @var ?int $maxSize unlimit on null

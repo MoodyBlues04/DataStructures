@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace tests;
 
-use stack\ArrayStack;
+use DataStructures\stack\ArrayStack;
 use traits\RandomValuesTrait;
 
-include_once __DIR__ . '/../stack/ArrayStack.php';
+include_once __DIR__ . '/../DataStructures/stack/ArrayStack.php';
 include_once __DIR__ . '/../traits/RandomValuesTrait.php';
 
 class ArrayStackTest extends \PHPUnit\Framework\TestCase

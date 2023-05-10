@@ -6,9 +6,9 @@ namespace stack;
 
 use PHPUnit\Framework\TestCase;
 use traits\RandomValuesTrait;
-use stack\NodeStack;
+use DataStructures\stack\NodeStack;
 
-include_once __DIR__ . '/../stack/NodeStack.php';
+include_once __DIR__ . '/../DataStructures/stack/NodeStack.php';
 include_once __DIR__ . '/../traits/RandomValuesTrait.php';
 
 
