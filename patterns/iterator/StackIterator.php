@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace patterns\iterator;
 
 use DataStructures\stack\StackInterface;
-use Iterator;
 
 include_once __DIR__ . '/../../DataStructures/stack/StackInterface.php';
 
-class StackIterator implements Iterator
+class StackIterator implements \Iterator
 {
     private StackInterface $stack;
 

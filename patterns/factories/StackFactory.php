@@ -14,6 +14,7 @@ include_once __DIR__ . '/../../DataStructures/stack/StackInterface.php';
 
 class StackFactory
 {
+    /** @var string[] */
     private const VALID_CLASSES = [
         ArrayStack::class,
         NodeStack::class
