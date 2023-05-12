@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace tests;
 
 use DataStructures\stack\ArrayStack;
+use patterns\factories\StackFactory;
 use traits\RandomValuesTrait;
 
 include_once __DIR__ . '/../DataStructures/stack/ArrayStack.php';
 include_once __DIR__ . '/../traits/RandomValuesTrait.php';
+include_once __DIR__ . '/../patterns/factories/StackFactory.php';
 
 class ArrayStackTest extends \PHPUnit\Framework\TestCase
 {
@@ -27,7 +29,7 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
     public function testSize()
     {
         $testValues = $this->getRandomValuesArray();
-        $stack = $this->getStackByValues($testValues);
+        $stack = StackFactory::create(ArrayStack::class, $testValues);
 
         $this->assertSame(sizeof($testValues), $stack->getSize());
     }
@@ -35,7 +37,7 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
     public function testPop(): void
     {
         $testValues = $this->getRandomValuesArray();
-        $stack = $this->getStackByValues($testValues);
+        $stack = StackFactory::create(ArrayStack::class, $testValues);
 
         $idx = sizeof($testValues) - 1;
         while (!$stack->isEmpty()) {
@@ -70,14 +72,5 @@ class ArrayStackTest extends \PHPUnit\Framework\TestCase
 
         $this->expectException(\RuntimeException::class);
         $stack->push($values[0]);
-    }
-
-    private function getStackByValues(array $values): ArrayStack
-    {
-        $stack = new ArrayStack();
-        foreach ($values as $value) {
-            $stack->push($value);
-        }
-        return $stack;
     }
 }

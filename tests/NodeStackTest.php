@@ -7,9 +7,11 @@ namespace stack;
 use PHPUnit\Framework\TestCase;
 use traits\RandomValuesTrait;
 use DataStructures\stack\NodeStack;
+use patterns\factories\StackFactory;
 
 include_once __DIR__ . '/../DataStructures/stack/NodeStack.php';
 include_once __DIR__ . '/../traits/RandomValuesTrait.php';
+include_once __DIR__ . '/../patterns/factories/StackFactory.php';
 
 
 class NodeStackTest extends TestCase
@@ -29,7 +31,7 @@ class NodeStackTest extends TestCase
     public function testSize()
     {
         $testValues = $this->getRandomValuesArray();
-        $stack = $this->getStackByValues($testValues);
+        $stack = StackFactory::create(NodeStack::class, $testValues);
 
         $this->assertSame(sizeof($testValues), $stack->getSize());
     }
@@ -37,7 +39,7 @@ class NodeStackTest extends TestCase
     public function testPop(): void
     {
         $testValues = $this->getRandomValuesArray();
-        $stack = $this->getStackByValues($testValues);
+        $stack = StackFactory::create(NodeStack::class, $testValues);
 
         $idx = sizeof($testValues) - 1;
         while (!$stack->isEmpty()) {
@@ -72,14 +74,5 @@ class NodeStackTest extends TestCase
 
         $this->expectException(\RuntimeException::class);
         $stack->push($values[0]);
-    }
-
-    private function getStackByValues(array $values): NodeStack
-    {
-        $stack = new NodeStack();
-        foreach ($values as $value) {
-            $stack->push($value);
-        }
-        return $stack;
     }
 }
