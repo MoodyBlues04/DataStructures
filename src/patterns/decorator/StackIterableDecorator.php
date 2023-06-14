@@ -2,16 +2,12 @@
 
 declare(strict_types=1);
 
-namespace patterns\decorator;
+namespace src\patterns\decorator;
 
-use DataStructures\stack\StackInterface;
+use src\DataStructures\stack\StackInterface;
 use Iterator;
-use patterns\iterator\IterableInterface;
-use patterns\iterator\StackIterator;
-
-include_once __DIR__ . '/../../DataStructures/stack/StackInterface.php';
-include_once __DIR__ . '/../iterator/IterableInterface.php';
-include_once __DIR__ . '/../iterator/StackIterator.php';
+use src\patterns\iterator\IterableInterface;
+use src\patterns\iterator\StackIterator;
 
 class StackIterableDecorator implements IterableInterface
 {

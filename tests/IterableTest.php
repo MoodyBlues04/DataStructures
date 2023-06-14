@@ -10,11 +10,6 @@ use patterns\factories\StackFactory;
 use PHPUnit\Framework\TestCase;
 use traits\RandomValuesTrait;
 
-include_once __DIR__ . '/../patterns/factories/StackFactory.php';
-include_once __DIR__ . '/../patterns/decorator/StackIterableDecorator.php';
-include_once __DIR__ . '/../DataStructures/stack/ArrayStack.php';
-include_once __DIR__ . '/../traits/RandomValuesTrait.php';
-
 class IterableTest extends TestCase
 {
     use RandomValuesTrait;

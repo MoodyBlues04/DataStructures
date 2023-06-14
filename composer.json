@@ -1,4 +1,19 @@
 {
+    "name": "ant/query-builder",
+    "description": "QueryBuilder",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/",
+            "QueryBuilder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MoodyBlues04",
+            "email": "105989507+MoodyBlues04@users.noreply.github.com"
+        }
+    ],
+    "require": {},
     "require-dev": {
         "phpunit/phpunit": "^10"
     }

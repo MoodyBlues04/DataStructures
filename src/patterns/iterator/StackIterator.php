@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-namespace patterns\iterator;
+namespace src\patterns\iterator;
 
-use DataStructures\stack\StackInterface;
-
-include_once __DIR__ . '/../../DataStructures/stack/StackInterface.php';
+use src\DataStructures\stack\StackInterface;
 
 class StackIterator implements \Iterator
 {

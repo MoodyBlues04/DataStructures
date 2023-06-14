@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DataStructures\stack;
+namespace src\DataStructures\stack;
 
 interface StackInterface
 {

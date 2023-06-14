@@ -1,6 +1,6 @@
 <?php
 
-namespace DataStructures\node;
+namespace src\DataStructures\node;
 
 class TreeNode
 {

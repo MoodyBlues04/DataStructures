@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DataStructures\queue;
-
-include_once __DIR__ . '/QueueInterface.php';
+namespace src\DataStructures\queue;
 
 class Queue implements QueueInterface
 {

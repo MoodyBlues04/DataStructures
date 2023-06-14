@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DataStructures\queue;
+namespace src\DataStructures\queue;
 
 // TODO create getIterator for each type of struct (and methods like swap etc on it)
 interface QueueInterface

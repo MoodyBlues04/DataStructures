@@ -6,9 +6,6 @@ use PHPUnit\Framework\TestCase;
 use DataStructures\queue\Queue;
 use traits\RandomValuesTrait;
 
-include_once __DIR__ . '/../DataStructures/queue/Queue.php';
-include_once __DIR__ . '/../traits/RandomValuesTrait.php';
-
 class QueueTest extends TestCase
 {
     use RandomValuesTrait;

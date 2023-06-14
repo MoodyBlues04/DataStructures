@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DataStructures\HashTable;
+namespace src\DataStructures\HashTable;
 
 interface HashTableInterface
 {

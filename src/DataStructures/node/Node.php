@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DataStructures\node;
+namespace src\DataStructures\node;
 
 class Node
 {

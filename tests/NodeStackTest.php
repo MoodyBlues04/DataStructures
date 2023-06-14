@@ -9,11 +9,6 @@ use traits\RandomValuesTrait;
 use DataStructures\stack\NodeStack;
 use patterns\factories\StackFactory;
 
-include_once __DIR__ . '/../DataStructures/stack/NodeStack.php';
-include_once __DIR__ . '/../traits/RandomValuesTrait.php';
-include_once __DIR__ . '/../patterns/factories/StackFactory.php';
-
-
 class NodeStackTest extends TestCase
 {
     use RandomValuesTrait;

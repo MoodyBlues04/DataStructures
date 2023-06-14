@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DataStructures\stack;
-
-include_once __DIR__ . '/StackInterface.php';
+namespace src\DataStructures\stack;
 
 class ArrayStack implements StackInterface
 {

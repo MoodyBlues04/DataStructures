@@ -8,10 +8,6 @@ use DataStructures\stack\ArrayStack;
 use patterns\factories\StackFactory;
 use traits\RandomValuesTrait;
 
-include_once __DIR__ . '/../DataStructures/stack/ArrayStack.php';
-include_once __DIR__ . '/../traits/RandomValuesTrait.php';
-include_once __DIR__ . '/../patterns/factories/StackFactory.php';
-
 class ArrayStackTest extends \PHPUnit\Framework\TestCase
 {
     use RandomValuesTrait;

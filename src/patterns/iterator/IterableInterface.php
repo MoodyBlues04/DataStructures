@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace patterns\iterator;
+namespace src\patterns\iterator;
 
 use Iterator;
 

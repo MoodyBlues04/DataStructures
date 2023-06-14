@@ -2,15 +2,11 @@
 
 declare(strict_types=1);
 
-namespace patterns\factories;
+namespace src\patterns\factories;
 
-use DataStructures\stack\ArrayStack;
-use DataStructures\stack\NodeStack;
-use DataStructures\stack\StackInterface;
-
-include_once __DIR__ . '/../../DataStructures/stack/ArrayStack.php';
-include_once __DIR__ . '/../../DataStructures/stack/NodeStack.php';
-include_once __DIR__ . '/../../DataStructures/stack/StackInterface.php';
+use src\DataStructures\stack\ArrayStack;
+use src\DataStructures\stack\NodeStack;
+use src\DataStructures\stack\StackInterface;
 
 class StackFactory
 {
