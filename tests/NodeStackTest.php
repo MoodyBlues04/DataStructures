@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace stack;
 
 use PHPUnit\Framework\TestCase;
-use traits\RandomValuesTrait;
-use DataStructures\stack\NodeStack;
-use patterns\factories\StackFactory;
+use src\traits\RandomValuesTrait;
+use src\DataStructures\stack\NodeStack;
+use src\patterns\factories\StackFactory;
 
 class NodeStackTest extends TestCase
 {

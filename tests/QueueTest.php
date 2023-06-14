@@ -3,8 +3,8 @@
 namespace tests;
 
 use PHPUnit\Framework\TestCase;
-use DataStructures\queue\Queue;
-use traits\RandomValuesTrait;
+use src\DataStructures\queue\Queue;
+use src\traits\RandomValuesTrait;
 
 class QueueTest extends TestCase
 {

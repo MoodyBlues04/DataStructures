@@ -1,10 +1,11 @@
 {
-    "name": "ant/query-builder",
-    "description": "QueryBuilder",
+    "name": "ant/data-structures",
+    "description": "DataStructures",
     "autoload": {
         "psr-4": {
             "src\\": "src/",
-            "QueryBuilder\\": "src/"
+            "data-structures\\": "src/",
+            "tests\\": "src/"
         }
     },
     "authors": [

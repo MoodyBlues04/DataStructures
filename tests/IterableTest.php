@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace tests;
 
-use DataStructures\stack\ArrayStack;
-use patterns\decorator\StackIterableDecorator;
-use patterns\factories\StackFactory;
+use src\DataStructures\stack\ArrayStack;
+use src\patterns\decorator\StackIterableDecorator;
+use src\patterns\factories\StackFactory;
 use PHPUnit\Framework\TestCase;
-use traits\RandomValuesTrait;
+use src\traits\RandomValuesTrait;
 
 class IterableTest extends TestCase
 {

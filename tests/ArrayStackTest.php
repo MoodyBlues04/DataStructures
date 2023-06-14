@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace tests;
 
-use DataStructures\stack\ArrayStack;
-use patterns\factories\StackFactory;
-use traits\RandomValuesTrait;
+use src\DataStructures\stack\ArrayStack;
+use src\patterns\factories\StackFactory;
+use src\traits\RandomValuesTrait;
 
 class ArrayStackTest extends \PHPUnit\Framework\TestCase
 {
